@@ -1,7 +1,8 @@
 const fibonacci = function (n) {
-  const fibo = [1, 1];
-  for (let i = 2; i < n; i++) {
-    fibo[i] = fibo[i - 2] + fibo[i - 1];
+  if (n < 0) return "OOPS";
+  const fibo = [0, 1];
+  for (let i = 1; i < n; i++) {
+    fibo.push(fibo[i] + fibo[i - 1]);
   }
   return fibo[n];
 };
